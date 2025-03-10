@@ -22,7 +22,7 @@ void Server::start() {
 void Server::onMessage(const std::shared_ptr<vsomeip::message>& request) {
     std::cout << "SERVICE: Received a file request from the client." << std::endl;
     // Providing the path of the image file
-    std::ifstream file("/home/pavan/project/images.jpg", std::ios::binary);
+    std::ifstream file("/boot/images.jpg", std::ios::binary);
     if (file.is_open()) {
         const size_t fragment_size = 1350; // Setting the fragment size to be less than the maximum message size
         // Reading the content of the image file
