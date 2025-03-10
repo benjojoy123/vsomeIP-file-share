@@ -68,7 +68,7 @@ void Client::onMessage(const std::shared_ptr<vsomeip::message>& response) {
     ss << std::put_time(std::localtime(&time_point), "%Y%m%d%H%M%S");
 
     // Construct the full file path
-    std::string file_name = "/home/ajith/vsomeIP/" + received_filename + "_" + ss.str() + ".jpg";
+    std::string file_name = "/boot" + received_filename + "_" + ss.str() + ".jpg";
 
     // Open the output file in append mode if not opened yet or if the filename has changed
     if (!output_file.is_open() || received_filename != packet.filename) {
